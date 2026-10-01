@@ -287,3 +287,93 @@
 //        }
 //    }
 //}
+
+
+
+
+
+
+
+
+
+
+
+
+//Q4
+
+
+//using System;
+//using System.Collections.Generic;
+
+//namespace AdvancedCSharpAssignment
+//{
+//    // Product Model
+//    public class Product
+//    {
+//        public int Id { get; set; }
+//        public string Name { get; set; }
+//        public string Category { get; set; }
+//        public double Price { get; set; }
+//        public int Stock { get; set; }
+//    }
+
+//    // Product Filter Service
+//    public class ProductFilter
+//    {
+//        // Predicate is used because it checks a condition
+//        // and returns true or false.
+//        public static List<Product> FilterProducts(
+//            List<Product> products,
+//            Predicate<Product> condition)
+//        {
+//            List<Product> result = new List<Product>();
+
+//            foreach (Product product in products)
+//            {
+//                if (condition(product))
+//                {
+//                    result.Add(product);
+//                }
+//            }
+
+//            return result;
+//        }
+//    }
+
+//    // Main Program
+//    class Program
+//    {
+//        static void Main(string[] args)
+//        {
+//            List<Product> products = new List<Product>
+//            {
+//                new Product { Id = 1, Name = "Laptop", Category = "Electronics", Price = 1200, Stock = 10 },
+//                new Product { Id = 2, Name = "Phone", Category = "Electronics", Price = 800, Stock = 15 },
+//                new Product { Id = 3, Name = "T-Shirt", Category = "Clothing", Price = 25, Stock = 50 },
+//                new Product { Id = 4, Name = "Jeans", Category = "Clothing", Price = 60, Stock = 30 },
+//                new Product { Id = 5, Name = "Chocolate", Category = "Food", Price = 5, Stock = 100 },
+//                new Product { Id = 6, Name = "Coffee Beans", Category = "Food", Price = 20, Stock = 40 },
+//                new Product { Id = 7, Name = "C# Book", Category = "Books", Price = 45, Stock = 25 },
+//                new Product { Id = 8, Name = "Novel", Category = "Books", Price = 15, Stock = 8 },
+//                new Product { Id = 9, Name = "Headphones", Category = "Electronics", Price = 90, Stock = 18 },
+//                new Product { Id = 10, Name = "Jacket", Category = "Clothing", Price = 150, Stock = 5 }
+//            };
+
+//            // Low-Stock Alert: Find products with Stock < 20
+//            Console.WriteLine("=== Low-Stock Alert ===");
+
+//            List<Product> lowStockProducts =
+//                ProductFilter.FilterProducts(
+//                    products,
+//                    p => p.Stock < 20
+//                );
+
+//            foreach (Product product in lowStockProducts)
+//            {
+//                Console.WriteLine(
+//                    $"[LOW STOCK] {product.Name}: only {product.Stock} left!"
+//                );
+//            }
+//        }
+//    }
+//}
